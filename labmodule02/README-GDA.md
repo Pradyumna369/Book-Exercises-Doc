@@ -2,48 +2,30 @@
 
 ## Lab Module 02
 
-Be sure to implement all the PIOT-GDA-* issues (requirements) listed at [PIOT-INF-02-001 - Lab Module 02](https://github.com/orgs/programming-the-iot/projects/1#column-9974938).
-
 ### Description
-
-NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
 What does your implementation do? 
 
+Built an application - GDA(Gateway Device Application) using Java . The application log the CPU utilization and Memory utilization and regular intervals using system logger.
+
 How does your implementation work?
+
+SystemPerformanceManager module in the applications uses handleTelemetry method to get the CPU and Memory utilization which is connected to GDA. SystemCpuUtilTask module returns the CPU utilization percentage and SystemMemUtilTask module returns the memory utilization memory to the SystemPerformanceManager. A background scheuler using apscheduler library schedules each task at regular intervals and logs the values.
 
 ### Code Repository and Branch
 
-NOTE: Be sure to include the branch (e.g. https://github.com/programming-the-iot/python-components/tree/alpha001).
-
-URL: 
+URL: https://github.com/Pradyumna36/PIOT-Java-Components/tree/labmodule02
 
 ### UML Design Diagram(s)
 
-NOTE: Include one or more UML designs representing your solution. It's expected each
-diagram you provide will look similar to, but not the same as, its counterpart in the
-book [Programming the IoT](https://learning.oreilly.com/library/view/programming-the-internet/9781492081401/).
-
+https://github.com/Pradyumna36/Book-Exercises-Doc/issues/2
 
 ### Unit Tests Executed
 
-NOTE: TA's will execute your unit tests. You only need to list each test case below
-(e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
-since you need to ensure you haven't introduced regressions.
-
-- 
-- 
-- 
+SystemCpuUtilTaskTest, SystemMemUtilTaskTest
 
 ### Integration Tests Executed
 
-NOTE: TA's will execute most of your integration tests using their own environment, with
-some exceptions (such as your cloud connectivity tests). In such cases, they'll review
-your code to ensure it's correct. As for the tests you execute, you only need to list each
-test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
-
-- 
-- 
-- 
+ConstrainedDeviceAppTest, SystemPerformanceManagerTest
 
 EOF.
