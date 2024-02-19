@@ -2,48 +2,31 @@
 
 ## Lab Module 03
 
-Be sure to implement all the PIOT-CDA-* issues (requirements) listed at [PIOT-INF-03-001 - Lab Module 03](https://github.com/orgs/programming-the-iot/projects/1#column-10488379).
-
 ### Description
 
-NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
-
 What does your implementation do? 
+Added simulation and actuation capabilities into CDA using a data generator to generate time-series data for humidity, pressure and temperature. The generator creates a data sets which are packaged as telemetry objects that contain additional information about the device. A threshold trigger issues an actuator command to the actuator simulator when the sensor value fall outside the threshold values.
 
 How does your implementation work?
+A simple data generator within the python-components repository is used to create time series data for the sensors. The DeviceDataManager handles all data processing within the application and sends the requests to appropriate destinations. It receives data from SensorAdapterManager and sends actuation commands to ActuatorAdapterManager. _handleSensorDataAnalysis() method checks if the sensor value is above the ceiling value or below the floor value and sends actuator command to turn ON HVAC if required.  
 
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch (e.g. https://github.com/programming-the-iot/python-components/tree/alpha001).
 
-URL: 
+URL: https://github.com/Pradyumna36/PIOT-Python-Components.git - LabModule03
 
 ### UML Design Diagram(s)
 
-NOTE: Include one or more UML designs representing your solution. It's expected each
-diagram you provide will look similar to, but not the same as, its counterpart in the
-book [Programming the IoT](https://learning.oreilly.com/library/view/programming-the-internet/9781492081401/).
-
+UML diagram - https://github.com/Pradyumna36/Book-Exercises-Doc/blob/labmodule03/labmodule03/CDA%20simulator%20UML.png
 
 ### Unit Tests Executed
 
-NOTE: TA's will execute your unit tests. You only need to list each test case below
-(e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
-since you need to ensure you haven't introduced regressions.
-
-- 
-- 
-- 
+ActuatorDataTest, BaseIotDataTest, SensorDataTest, SystemPerformanceDataTest, HumidifierActuatorSimTaskTest,
+HumiditySensorSimTaskTest, HvacActuatorSimTaskTest, PressureSensorSimTaskTest, TemperatureSensorSimTaskTest
 
 ### Integration Tests Executed
 
-NOTE: TA's will execute most of your integration tests using their own environment, with
-some exceptions (such as your cloud connectivity tests). In such cases, they'll review
-your code to ensure it's correct. As for the tests you execute, you only need to list each
-test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
-
-- 
-- 
-- 
+DeviceDataManagerNoCommsTest, ActuatorAdapterManagerTest, SensorAdapterManagerTest
 
 EOF.
