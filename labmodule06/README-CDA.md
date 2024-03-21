@@ -2,27 +2,17 @@
 
 ## Lab Module 06
 
-Be sure to implement all the PIOT-CDA-* issues (requirements) listed at [PIOT-INF-06-001 - Lab Module 06](https://github.com/orgs/programming-the-iot/projects/1#column-10488434).
-
-### Description
-
-NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
-
 What does your implementation do? 
+Updating the CDA to implement MQTT client that can publish messages to an MQTT broker and receive updates through topic level subscription
 
 How does your implementation work?
+By adding a MQTT client abstraction layer to CDA, the MQTT client can publish and subscribe messages to the Mosquitto MQTT broker for the particular topic.
 
 ### Code Repository and Branch
 
-NOTE: Be sure to include the branch (e.g. https://github.com/programming-the-iot/python-components/tree/alpha001).
-
-URL: 
+URL: https://github.com/Pradyumna369/PIOT-Python-Components/tree/labmodule06
 
 ### UML Design Diagram(s)
-
-NOTE: Include one or more UML designs representing your solution. It's expected each
-diagram you provide will look similar to, but not the same as, its counterpart in the
-book [Programming the IoT](https://learning.oreilly.com/library/view/programming-the-internet/9781492081401/).
 
 
 ### Unit Tests Executed
