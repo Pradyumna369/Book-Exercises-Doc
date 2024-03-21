@@ -20,6 +20,6 @@ https://github.com/Pradyumna369/Book-Exercises-Doc/blob/labmodule06/labmodule06/
 
 ### Integration Tests Executed
 
-MqttClientConnectorTest
+MqttClientConnectorTest, MqttClientControlPacketTest
 
 EOF.
