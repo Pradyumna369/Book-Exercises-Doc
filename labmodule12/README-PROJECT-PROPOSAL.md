@@ -20,7 +20,7 @@ Many people care about this, including homeowners who want to feel cozy at home,
 
 High level diagram: https://github.com/Pradyumna369/Book-Exercises-Doc/blob/main/labmodule12/image.png
 
-The project will utilize a constrained device application, gateway device application and cloud service. CDA will be responsible for monitoring temperature, humidity changes and triggering HVAC events. GDA will be receive data from CDA and sending actuation commands when the temperature and humidity levels falls outside predefined threshold limits. Cloud services will be used to store data and showing data in dashboard.
+The project will utilize a constrained device application, gateway device application and cloud service. CDA will be responsible for monitoring temperature, humidity changes and triggering HVAC events. GDA will be receive data from CDA and sending actuation commands when the temperature and humidity levels falls outside predefined threshold limits. Cloud services will be used to store data and showing data in dashboard. MQTT protocol will be used for communication between CDA, GDA and cloud service.
 
 
 
